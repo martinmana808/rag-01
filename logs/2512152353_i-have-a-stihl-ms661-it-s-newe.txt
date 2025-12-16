@@ -1,0 +1,41 @@
+[23:53:56] USER: I have a Stihl MS661, it’s newer I don’t have serial no, but
+can see it running M-Tronic 3.0, I need a cylinder piston and relevant gaskets to replace
+a lean seized saw, give me part nos and repair instructions.
+----------------------------------------
+[23:54:27] GARY: [THOUGHTS]: - Context: User wants piston and gaskets for MS661 M‑Tronic 3.0.
+- Database: No part numbers for piston or gaskets in provided context.
+- Must admit lack of specific data, but can give general repair steps.
+- Provide safety note, steps, mention that parts must be original STIHL.
+- No parts table with unknown data.
+- End with suggestions list in first person.
+[ANSWER]: ### Repair Instructions – Cylinder Piston & Gaskets (MS661 M‑Tronic 3.0)
+
+**Safety first:**  
+> **Kill power, disconnect battery, and engage the chain brake before you start.**  
+> Keep the saw on a stable surface and use a workbench or assembly stand if available.
+
+1. **Remove the saw chain, sprocket, and guide bar** – this gives you clear access to the engine and prevents accidental chain movement.  
+2. **Detach the muffler** – follow the procedure on page 25 of the MS 661 repair manual.  
+   - Loosen the muffler screws, remove the gasket, and set the muffler aside.  
+3. **Open the engine case** – remove the top casing screws, lift the top cover, and expose the cylinder.  
+4. **Remove the piston**  
+   - Loosen the piston pin (if present) or use a piston removal tool.  
+   - Pull the piston straight out; if it’s stuck, gently tap with a rubber mallet.  
+5. **Inspect the cylinder and piston** – look for scoring, wear, or damage.  
+   - If the cylinder is scored, consider a cylinder replacement or re‑bore if you have the tooling.  
+6. **Replace the piston** – slide the new piston into the cylinder, ensuring it sits flush with the piston pin.  
+7. **Install new gaskets**  
+   - **Cylinder head gasket** – replace with a new STIHL‑approved gasket.  
+   - **Piston ring seal** – if the manual specifies a separate gasket for the piston rings, install it.  
+   - **Engine case gasket** – replace the gasket that seals the top casing.  
+8. **Re‑assemble**  
+   - Tighten the piston pin to the specified torque (if the manual gives a value; if not, use a standard torque wrench and follow the sequence in the manual).  
+   - Re‑install the top casing, muffler, and all associated gaskets.  
+   - Re‑attach the chain sprocket, guide bar, and chain.  
+9. **Check the M‑Tronic system** – after re‑assembly, run the saw to ensure the M‑Tronic 3.0 control unit is functioning and the engine runs smoothly.  
+10. **Final safety check** – verify that all bolts are torqued to spec, the chain is properly tensioned, and the saw is ready for use.
+
+> **Note:** All parts should be original STIHL replacements. If you need the exact part numbers, you’ll have to check the latest STIHL parts catalogue or contact a dealer. I don’t have those specific numbers in my local manuals.
+
+---
+----------------------------------------

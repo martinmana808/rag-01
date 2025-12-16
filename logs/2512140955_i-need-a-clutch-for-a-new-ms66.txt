@@ -1,0 +1,19 @@
+[09:55:15] USER: I need a clutch for a new MS661 I want the complete part numbers and all
+individual plus fitting instructions.
+----------------------------------------
+[09:55:37] GARY: [THOUGHTS]: - Need intake details: model, serial, symptoms, recent work, fuel/battery.
+- Ask all in one concise message.
+- No hunch or instructions yet.
+[ANSWER]: ### Intake Request
+Hey, to give you the exact clutch part numbers and fitting steps for your MS661, I’ll need a few details:
+
+1. **Model & suffix** (e.g., C‑BE, C‑C, etc.)  
+2. **Serial number** (if you have it).  
+3. **Symptom pattern** – is it a hot‑start, cold‑start, load‑issue, idle‑problem, etc.?  
+4. **Recent work done** – have you removed the clutch before, or is this a brand‑new machine?  
+5. **Fuel age or battery state** – fresh fuel or a new battery?
+
+Once I have that, I can pull the exact part list and give you the step‑by‑step fitting instructions.
+----------------------------------------
+[09:56:10] USER: Need more info
+----------------------------------------

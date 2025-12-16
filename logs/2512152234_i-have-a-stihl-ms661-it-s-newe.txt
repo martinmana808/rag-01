@@ -1,0 +1,36 @@
+[22:34:17] USER: I have a Stihl MS661, it’s newer I don’t have serial no, but can see it running M-Tronic 3.0, I need a cylinder piston and relevant gaskets to replace a lean seized saw, give me part nos and repair instructions.
+----------------------------------------
+[22:34:40] GARY: [THOUGHTS]: **Analysis:**  
+- The user requests piston part numbers and gaskets for a Stihl MS661.  
+- The provided database context contains no piston or gasket part numbers.  
+- According to the rules, I must explicitly state that I don't have that specific data.  
+- I can still give a general replacement procedure, but I must not provide any guessed or estimated part numbers.  
+- The user also wants repair instructions, so I will give a concise, practical step‑by‑step guide.  
+- Finally, I will offer three user‑friendly suggestion buttons in first‑person form.
+[ANSWER]: ### Repair Instructions – Cylinder Piston & Gaskets (MS 661)
+
+**Safety first:**  
+- **Kill power** – disconnect battery or remove spark plug.  
+- **Engage the brake** and secure the saw on an assembly stand.
+
+1. **Remove the saw chain, bar, and guide bar** – keep them handy for re‑assembly.  
+2. **Detach the muffler** (see manual page 25).  
+   - Loosen the screws, remove the top casing, and set aside.  
+3. **Remove the cylinder head** – unscrew the head bolts, lift the head off.  
+4. **Take out the piston** – lift it straight up; note the orientation of the piston rings.  
+5. **Inspect the cylinder walls** for scoring or wear.  
+6. **Replace the piston rings** – install new rings in the same order.  
+7. **Install the new piston** – slide it in, ensuring the rings seat properly.  
+8. **Replace the cylinder gasket** – install a fresh gasket between head and cylinder.  
+9. **Re‑install the cylinder head** – tighten bolts in the specified sequence.  
+10. **Re‑attach the muffler** – replace the gasket, re‑install the top casing, and secure with screws.  
+11. **Re‑install the chain, bar, and guide bar**.  
+12. **Reconnect battery** and perform a quick idle check to confirm smooth operation.
+
+> **Tip:** If the saw was “lean‑seized”, after the piston replacement run a short test at low load to ensure the engine is no longer running lean. Adjust the carburetor or M‑Tronic settings if necessary.
+
+---
+
+**I don't have that specific data in my local manuals.**  
+If you need the exact part numbers, you’ll have to check the latest STIHL parts catalogue or contact a dealer.
+----------------------------------------

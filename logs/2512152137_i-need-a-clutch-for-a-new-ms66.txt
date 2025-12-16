@@ -1,0 +1,11 @@
+[21:37:48] USER: I need a clutch for a new MS661 I want the complete part numbers and all
+individual plus fitting instructions
+----------------------------------------
+[21:38:11] GARY: [THOUGHTS]: 1. Check if the user has provided the serial number of the MS661.
+2. If not, proceed to B_FIRST_TAKE with a warning that parts may vary.
+3. If the serial number is provided, check the repair manual for the correct clutch part numbers and fitting instructions.
+4. Generate a response with the complete part numbers and fitting instructions.
+5.
+[ANSWER]: Hi there! I see you need a new clutch for your MS661. Could you please provide me with the serial number of your machine? This will help me give you the correct part numbers and fitting instructions.
+```
+----------------------------------------

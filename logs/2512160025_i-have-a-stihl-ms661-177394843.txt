@@ -1,0 +1,57 @@
+[00:25:18] USER: I have a Stihl MS661, 177394843 serial no, but can see it running M-Tronic 3.0, I need a cylinder piston and relevant gaskets to replace a lean seized saw, give me part nos and repair instructions.
+----------------------------------------
+[00:25:55] GARY: [THOUGHTS]: **Analysis of Context**  
+- The database excerpts contain general service instructions and a few part numbers (e.g., stud drivers), but **no piston or gasket part numbers** for the MS 661.  
+- The user requests specific part numbers and repair instructions.  
+- According to the rules, if the required data is not present, I must explicitly state that I don't have it and cannot fabricate numbers.  
+- I can still provide a practical, step‑by‑step procedure for removing and installing a piston and gaskets, and give safety reminders.  
+- No diagnostic hunches or guesses about part numbers are allowed.  
+- After the response, I will give three first‑person suggestion buttons for the user.
+[ANSWER]: ### Repair Instructions – Cylinder Piston & Gaskets (MS 661, M‑Tronic 3.0)
+
+**Safety first**  
+> **Kill power, disconnect the battery, and engage the chain brake** before you start any work.
+
+1. **Remove the cylinder**  
+   - Loosen the cylinder‑to‑crankcase bolts (usually M8 or M10).  
+   - Carefully lift the cylinder out of the crankcase.  
+   - Inspect the cylinder for scoring or wear; replace if necessary.
+
+2. **Remove the piston**  
+   - Take the piston out of the cylinder.  
+   - Inspect the piston rings and the cylinder bore for wear or damage.  
+   - Clean the piston and cylinder with a solvent and a soft brush.
+
+3. **Replace the piston rings**  
+   - Install new piston rings (top, middle, and bottom) in the correct order.  
+   - Ensure the rings are seated properly and not twisted.
+
+4. **Install new gaskets**  
+   - Replace the **crankcase‑to‑cylinder gasket** (often a flat rubber or silicone gasket).  
+   - Replace the **piston‑to‑cylinder gasket** (if separate).  
+   - Use a clean, lint‑free cloth to wipe the gasket surfaces before installation.
+
+5. **Re‑assemble**  
+   - Place the piston back into the cylinder, aligning the rings.  
+   - Slide the cylinder back into the crankcase.  
+   - Tighten the cylinder bolts in a **criss‑cross pattern** to the manufacturer’s torque spec (if known).  
+   - Re‑install any timing or compression components that were removed.
+
+6. **Re‑check compression**  
+   - With the engine off, use a compression gauge to verify that compression is within spec.  
+   - If compression is low, inspect the piston rings, cylinder walls, and valve seats again.
+
+7. **Re‑install the M‑Tronic control unit**  
+   - Re‑attach the M‑Tronic 3.0 module, ensuring all connectors are seated correctly.  
+   - Verify that the control unit is properly grounded.
+
+8. **Final checks**  
+   - Re‑connect the battery.  
+   - Start the engine and listen for smooth operation.  
+   - Check for any leaks or abnormal vibrations.
+
+> **I don't have that specific data in my local manuals.**  
+> I can’t provide the exact part numbers for the piston or gaskets, but the steps above will guide you through the replacement process. If you need the exact part numbers, you’ll need to consult the official STIHL parts catalogue or contact a STIHL dealer.
+
+---
+----------------------------------------

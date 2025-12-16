@@ -1,0 +1,57 @@
+[00:28:23] USER: I have a Stihl MS661, 177394843 serial no, but can see it running M-Tronic 3.0, I need a cylinder piston and relevant gaskets to replace a lean seized saw, give me part nos and repair instructions.
+----------------------------------------
+[00:28:49] GARY: [THOUGHTS]: 
+[ANSWER]: **I’m sorry, but I don’t have the specific part numbers for the cylinder piston or the associated gaskets for the MS 661 in my local manuals.**  
+I can still walk you through the general procedure for removing and reinstalling the piston, but you’ll need to source the correct parts from a STIHL dealer or the official parts catalogue.
+
+---
+
+### General Piston Removal & Re‑installation (M‑Tronic 3.0)
+
+> **Safety first:**  
+> • **Kill power** – disconnect the battery or remove the spark plug.  
+> • **Engage the brake** and lock the saw in the neutral position.  
+> • Work in a well‑ventilated area and wear eye protection.
+
+#### 1. Remove the Engine Cover & Muffler
+1. Unscrew the engine cover screws (usually 4 × 10 mm).  
+2. Lift the cover and set aside.  
+3. Remove the muffler by loosening the mounting bolts (typically 4 × 12 mm).  
+4. Keep the gasket in a clean container; you’ll need a new one.
+
+#### 2. Access the Cylinder
+1. Detach the fuel line and throttle linkage.  
+2. Remove the spark plug and note its orientation.  
+3. Loosen the cylinder head bolts (usually 4 × 12 mm).  
+4. Carefully lift the cylinder off the crankcase.  
+5. Inspect the cylinder for scoring or wear; replace if necessary.
+
+#### 3. Remove the Piston
+1. With the cylinder removed, locate the piston.  
+2. Use a piston removal tool or a long‑shank screwdriver to push the piston out of the cylinder.  
+3. Inspect the piston for wear or damage.  
+4. If the piston is seized, you may need a piston puller or a small hammer and a pry bar – be gentle to avoid cracking the cylinder.
+
+#### 4. Install the New Piston
+1. Apply a thin layer of engine oil to the piston ring(s).  
+2. Slide the new piston into the cylinder, ensuring the ring(s) sit correctly.  
+3. Re‑install the cylinder onto the crankcase, tightening the head bolts in a star pattern to the specified torque (if known).  
+4. Re‑attach the spark plug, fuel line, and throttle linkage.
+
+#### 5. Re‑assemble
+1. Install a new gasket on the muffler and re‑attach it.  
+2. Replace the engine cover and secure it.  
+3. Re‑connect the battery or spark plug.  
+4. Perform a compression test (should be within spec for the MS 661).  
+5. Start the saw and check for smooth operation; adjust the M‑Tronic settings if needed.
+
+---
+
+**Next steps for parts:**
+
+- **Contact a STIHL dealer** or check the official STIHL parts catalogue for the exact piston and gasket part numbers for the MS 661.  
+- If you have the service manual’s part list, look for the “Cylinder Piston” section; the part number will be listed there.  
+- Once you have the part numbers, you can order them directly from STIHL or a reputable parts supplier.
+
+---
+----------------------------------------

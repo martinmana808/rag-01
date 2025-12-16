@@ -9,6 +9,40 @@ import ast
 import random
 import re
 
+# --- 1. PAGE CONFIG (MUST BE FIRST) ---
+st.set_page_config(page_title="Gary - STIHL Tech AI", layout="wide")
+
+# --- 2. AUTOMATED MODEL MANAGEMENT ---
+# Gary automatically assigns the right tool for the job.
+# - 'all-minilm': Small, fast, made for reading data (Embeddings).
+# - 'gpt-oss:20b': Smart, verbose, made for talking (Chat).
+
+EMBEDDING_MODEL = "all-minilm" 
+PRIMARY_CHAT_MODEL = "gpt-oss:20b"
+FALLBACK_CHAT_MODEL = "llama3.2"
+
+def get_chat_model():
+    """Auto-selects the best available chat model so the user doesn't have to."""
+    try:
+        models = [m.get('model', m.get('name')) for m in ollama.list()['models']]
+        # 1. Prefer the primary (gpt-oss)
+        if any(PRIMARY_CHAT_MODEL in m for m in models):
+            return PRIMARY_CHAT_MODEL
+        # 2. Fallback to Llama 3.2 if primary is missing
+        elif any(FALLBACK_CHAT_MODEL in m for m in models):
+            return FALLBACK_CHAT_MODEL
+        # 3. Last resort: Pick the first non-embedding model found
+        else:
+            valid_models = [m for m in models if "minilm" not in m and "vision" not in m]
+            if valid_models:
+                return valid_models[0]
+            return "gpt-oss:20b" # Blind hope
+    except:
+        return PRIMARY_CHAT_MODEL
+
+# Set the active chat model once at startup
+ACTIVE_CHAT_MODEL = get_chat_model()
+
 # --- CONFIGURATION & SETUP ---
 DB_PATH = "./chroma_db"
 LOG_DIR = "./logs"
@@ -31,7 +65,6 @@ collection = chroma_client.get_or_create_collection(name="enterprise_knowledge_b
 def get_session_log_file(first_prompt):
     """Generates a unique filename based on time + first prompt slug."""
     if "log_filename" not in st.session_state:
-        # Format: yymmddHHMM_prompt-slug.txt
         date_str = datetime.datetime.now().strftime("%y%m%d%H%M")
         slug = re.sub(r'[^a-z0-9]+', '-', first_prompt.lower()).strip('-')[:30]
         filename = f"{date_str}_{slug}.txt"
@@ -40,7 +73,6 @@ def get_session_log_file(first_prompt):
 
 def log_interaction(role, content):
     """Writes to the session-specific log file."""
-    # Fallback to system_log if writing happens before session init
     log_file = st.session_state.get("log_filename", os.path.join(LOG_DIR, "system_debug.txt"))
     timestamp = datetime.datetime.now().strftime("%H:%M:%S")
     
@@ -114,14 +146,15 @@ def batch_insert(chunks):
         embeddings = []
         for doc in docs:
             try:
-                res = ollama.embeddings(model="all-minilm", prompt=doc)
+                # STRICT: Always use the embedding model for DB ops
+                res = ollama.embeddings(model=EMBEDDING_MODEL, prompt=doc)
                 embeddings.append(res["embedding"])
             except:
                 embeddings.append([0]*384) 
 
         collection.add(ids=ids, embeddings=embeddings, documents=docs, metadatas=metas)
         
-        # --- FIX: Clamp progress to 1.0 maximum to prevent crash ---
+        # Clamp progress to 1.0 maximum to prevent crash
         current_progress = (i + BATCH_SIZE) / len(chunks)
         progress_bar.progress(min(current_progress, 1.0))
         
@@ -136,19 +169,17 @@ def load_system_prompt():
         return "You are a helpful assistant."
 
 # --- UI LAYOUT ---
-st.set_page_config(page_title="Gary - STIHL Tech AI", layout="wide")
 st.title("🔧 Gary (STIHL NZ Technician)")
+
+# Display active engine (Read-Only info)
+st.caption(f"🚀 Engine Active: **{ACTIVE_CHAT_MODEL}** | 🧠 Memory Engine: **{EMBEDDING_MODEL}**")
 
 with st.sidebar:
     st.header("Workshop Tools")
-    try:
-        models_info = ollama.list()['models']
-        available_models = [m.get('model', m.get('name')) for m in models_info]
-    except:
-        available_models = ["gpt-oss:20b"]
     
-    selected_model = st.selectbox("LLM Engine:", available_models, index=0)
-
+    # --- NO MODEL SELECTOR HERE ANYMORE ---
+    # The code automatically handles model switching.
+    
     # 1. DATABASE INSPECTOR
     st.divider()
     st.subheader("📚 Library Inspector")
@@ -170,7 +201,7 @@ with st.sidebar:
     with st.expander("🛠️ Dev / Debug Console", expanded=False):
         st.caption("Adjust Brain Parameters")
         temp_val = st.slider("Temperature", 0.0, 1.0, 0.1)
-        smart_val = st.select_slider("Reading Depth", options=[3, 5, 10], value=5)
+        smart_val = st.select_slider("Retrieval Sensitivity (Chunks)", options=[3, 5, 10, 15, 20], value=10)
         show_debug = st.checkbox("Show Raw Context (X-Ray)", value=False)
 
     st.divider()
@@ -209,6 +240,10 @@ for msg in st.session_state.history:
                 st.markdown(msg["thinking"])
         
         st.markdown(msg["content"])
+
+        # [NEW] Render References from History
+        if "sources" in msg and msg["sources"]:
+            st.caption(f"📚 References: {', '.join(msg['sources'])}")
         
         # X-Ray Debug View
         if show_debug and msg["role"] == "assistant" and "debug_context" in msg:
@@ -242,8 +277,8 @@ if prompt:
         st.markdown(prompt)
     
     with st.chat_message("assistant"):
-        # 1. RETRIEVAL
-        query_vec = ollama.embeddings(model="all-minilm", prompt=prompt)["embedding"]
+        # 1. RETRIEVAL (STRICTLY USES EMBEDDING MODEL)
+        query_vec = ollama.embeddings(model=EMBEDDING_MODEL, prompt=prompt)["embedding"]
         results = collection.query(query_embeddings=[query_vec], n_results=smart_val)
 
         context_text = ""
@@ -290,7 +325,7 @@ if prompt:
    - Format: <suggestions>["Option 1", "Option 2", "Option 3"]</suggestions>
 """
         
-        # 3. STREAM & RENDER
+        # 3. STREAM & RENDER (STRICTLY USES CHAT MODEL)
         
         # A. Status Container (Thinking Box) - Appears FIRST
         status_container = st.status("Initializing Gary...", expanded=True)
@@ -301,7 +336,7 @@ if prompt:
         response_placeholder = st.empty()
         
         stream = ollama.chat(
-            model=selected_model,
+            model=ACTIVE_CHAT_MODEL,
             messages=[{'role': 'user', 'content': final_system_prompt}],
             stream=True,
             options={"temperature": temp_val}
@@ -321,53 +356,56 @@ if prompt:
         if re.match(r'^\s*<thinking>', full_buffer):
             is_thinking = True
 
-        for chunk in stream:
-            token = chunk['message']['content']
-            full_buffer += token
-            
-            # --- LOGIC: SEPARATE THOUGHTS FROM ANSWER ---
-            
-            # Check if we are currently inside a thinking block
-            # We use Regex to match the opening tag cleanly
-            if is_thinking:
-                # We are thinking. Check if we hit the closing tag yet.
-                if "</thinking>" in full_buffer:
-                    is_thinking = False
-                    status_container.update(label="Thought Process Complete", state="complete", expanded=False)
-                    
-                    # Split cleanly. The [1] element is the Answer.
-                    parts = re.split(r'</\s*thinking>', full_buffer)
-                    if len(parts) > 1:
-                        answer_part = parts[1]
-                        # Clean suggestions out of view while typing
-                        clean_visible = answer_part.split("<suggestions>")[0]
-                        response_placeholder.markdown(clean_visible + "▌")
-                else:
-                    # We are still strictly thinking. Update ONLY the thought box.
-                    # Remove the opening <thinking> tag for display
-                    clean_thought = re.sub(r'^\s*<thinking>', '', full_buffer).strip()
-                    thought_placeholder.markdown(clean_thought)
-                    
-                    # Dynamic Header Logic
-                    lines = clean_thought.split('\n')
-                    if lines:
-                        last_line = lines[-1].strip()
-                        if last_line.startswith("**") and len(last_line) > 5:
-                            clean_header = last_line.replace("*", "").strip()
-                            status_container.update(label=f"💭 {clean_header}...")
-            
+        try:
+            for chunk in stream:
+                token = chunk['message']['content']
+                full_buffer += token
+                
+                # --- LOGIC: SEPARATE THOUGHTS FROM ANSWER ---
+                
+                if is_thinking:
+                    if "</thinking>" in full_buffer:
+                        is_thinking = False
+                        status_container.update(label="Thought Process Complete", state="complete", expanded=False)
+                        
+                        parts = re.split(r'</\s*thinking>', full_buffer)
+                
+                # Render content (incremental)
+                # ... (this logic continues below, but we need to ensure indentation matches)
+                # Actually, I need to replace the loop carefully.
+                
+                # SIMPLIFIED RENDER LOGIC FOR STABILITY:
+                clean_response = full_buffer
+                created_thought = ""
+
+                if "<thinking>" in full_buffer and "</thinking>" in full_buffer:
+                     parts = re.split(r'</\s*thinking>', full_buffer)
+                     if len(parts) > 1:
+                         created_thought = parts[0].replace("<thinking>", "").strip()
+                         clean_response = parts[1].strip()
+                         if thought_placeholder:
+                             thought_placeholder.markdown(created_thought)
+                                 
+                response_placeholder.markdown(clean_response + "▌")
+                
+        except Exception as e:
+            # HANDLER FOR "FALSE TOOL CALL" CRASH
+            error_str = str(e)
+            if "error parsing tool call" in error_str and "raw='" in error_str:
+                # Extract the hidden text that caused the crash
+                match = re.search(r"raw='(.*?)'", error_str, re.DOTALL)
+                if match:
+                    recovered_text = match.group(1)
+                    full_buffer += recovered_text
+                    # Re-run render logic for the recovered text
+                    clean_response = full_buffer
+                    if "<thinking>" in full_buffer and "</thinking>" in full_buffer:
+                         parts = re.split(r'</\s*thinking>', full_buffer)
+                         if len(parts) > 1:
+                             clean_response = parts[1].strip()
+                    response_placeholder.markdown(clean_response)
             else:
-                # We are NOT thinking. We are answering.
-                # If we never had thoughts, or if thoughts are done.
-                if "</thinking>" in full_buffer:
-                     # We had thoughts previously
-                     answer_part = re.split(r'</\s*thinking>', full_buffer)[-1]
-                     clean_visible = answer_part.split("<suggestions>")[0]
-                     response_placeholder.markdown(clean_visible + "▌")
-                else:
-                    # No thoughts found at all (Model skipped them). Just print everything.
-                    clean_visible = full_buffer.split("<suggestions>")[0]
-                    response_placeholder.markdown(clean_visible + "▌")
+                st.error(f"Stream error: {e}")
 
         # 4. FINAL CLEANUP
         status_container.update(label="Thought Process Complete", state="complete", expanded=False)
@@ -406,6 +444,7 @@ if prompt:
             "role": "assistant", 
             "content": clean_response, 
             "thinking": captured_thought,
-            "debug_context": debug_snapshots
+            "debug_context": debug_snapshots,
+            "sources": list(sources_used)
         })
         st.rerun()

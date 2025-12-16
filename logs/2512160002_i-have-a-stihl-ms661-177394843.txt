@@ -1,0 +1,60 @@
+[00:02:05] USER: I have a Stihl MS661, 177394843 serial no, but can see it running M-Tronic 3.0, I need a cylinder piston and relevant gaskets to replace a lean seized saw, give me part nos and repair instructions.
+
+
+----------------------------------------
+[00:02:32] GARY: [THOUGHTS]: - Context: User wants piston and gaskets for MS661 M‑Tronic 3.0.
+- Database: No piston or gasket part numbers present.
+- Must admit lack of specific data.
+- Provide general replacement procedure, safety, and note that original STIHL parts should be used.
+- No parts table with unknown data.
+- End with suggestions.
+[ANSWER]: ### Safety First
+- **Kill power** and **engage the brake** before working on the engine.
+- Keep the area well‑ventilated and wear eye protection.
+
+### General Procedure for Replacing the Cylinder Piston & Gaskets on a MS661
+
+1. **Remove the Bar & Chain**  
+   - Detach the guide bar and chain to free the saw for servicing.
+
+2. **Take the Saw Off the Assembly Stand**  
+   - Secure the machine on the stand as described in the manual (use the mounting plate and M‑8 nuts).
+
+3. **Remove the Muffler & Exhaust**  
+   - Follow the steps on Pg 25:  
+     - Remove screws (1,2).  
+     - Take out the top casing (3).  
+     - Remove the gasket (1) and replace with a new one.
+
+4. **Detach the Cylinder**  
+   - Loosen the cylinder bolts (usually 4‑mm or 5‑mm hex).  
+   - Carefully lift the cylinder off the crankcase, keeping the piston in place.
+
+5. **Remove the Old Piston**  
+   - Slide the piston out of the cylinder.  
+   - Inspect the cylinder bore for wear or scoring; clean with a soft brush and a mild solvent.
+
+6. **Install the New Piston**  
+   - Place the new piston into the cylinder, ensuring the piston pin is correctly aligned.  
+   - Apply a thin layer of high‑temperature engine oil to the piston pin.
+
+7. **Replace Gaskets**  
+   - Install new cylinder head gasket and any other required gaskets (e.g., crankcase gasket).  
+   - Ensure all gasket surfaces are clean and free of debris.
+
+8. **Reassemble**  
+   - Re‑install the cylinder onto the crankcase, tightening bolts in a star pattern to the specified torque (refer to the service manual for exact values).  
+   - Re‑attach the muffler, exhaust, and any other removed components.
+
+9. **Re‑install the Bar & Chain**  
+   - Mount the guide bar and chain back onto the saw, checking chain tension per the owner’s manual.
+
+10. **Final Checks**  
+    - Verify that the saw runs smoothly, the throttle responds correctly, and there are no unusual noises.  
+    - Perform a short test run at low speed to confirm proper operation.
+
+> **Note:** *I don't have that specific data in my local manuals.*  
+> For exact part numbers and torque specs, consult the latest STIHL MS661 service manual or contact a certified STIHL dealer. Always use original STIHL replacement parts.
+
+---
+----------------------------------------

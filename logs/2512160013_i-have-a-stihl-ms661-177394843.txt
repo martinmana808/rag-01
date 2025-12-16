@@ -1,0 +1,40 @@
+[00:13:06] USER: I have a Stihl MS661, 177394843 serial no, but can see it running M-Tronic 3.0, I need a cylinder piston and relevant gaskets to replace a lean seized saw, give me part nos and repair instructions.
+
+
+----------------------------------------
+[00:13:35] GARY: [THOUGHTS]: - Context: User wants piston and gasket part numbers for MS661 M‑Tronic 3.0.
+- Database: No piston or gasket part numbers listed.
+- Must admit lack of data, per rule 1.
+- Provide general replacement procedure (steps‑only style) without part numbers.
+- Safety note included.
+- End with suggestions buttons in first person.
+[ANSWER]: ### Repair Instructions – Cylinder Piston & Gaskets (MS661 M‑Tronic 3.0)
+
+**Safety first:**  
+> **Kill power, disconnect battery, and engage the brake.**  
+> Keep the saw on a stable surface and use a jack stand if needed.
+
+1. **Remove the saw chain, bar, and guide** – keep them in a clean area.  
+2. **Detach the muffler** (see manual page 25).  
+   - Loosen the screws, remove the top casing, and set aside.  
+3. **Remove the cylinder head** – unscrew the head bolts, lift the head off, and set aside.  
+4. **Take out the piston** – lift it out of the cylinder.  
+5. **Inspect the cylinder walls** for scoring or wear.  
+6. **Replace the piston** – slide the new piston into the cylinder.  
+7. **Install new gaskets** –  
+   - **Cylinder head gasket** (new each time).  
+   - **Cylinder‑piston gasket** (if separate).  
+   - **Muffler gasket** (if applicable).  
+8. **Re‑assemble** –  
+   - Place the cylinder head back on, tighten bolts in the specified sequence.  
+   - Re‑attach the muffler, chain, bar, and guide.  
+9. **Check compression** – use a compression gauge; it should be within spec.  
+10. **Re‑install the battery, start the saw, and test for smooth operation.**
+
+> **Tip:** If the saw was “lean” and seized, also inspect the carburetor jets and adjust the fuel mixture per the M‑Tronic tuning chart (page 16 of the repair manual).
+
+---
+
+**I don't have that specific data in my local manuals.**  
+If you need the exact part numbers, you’ll have to check the latest STIHL parts catalogue or contact a dealer.
+----------------------------------------

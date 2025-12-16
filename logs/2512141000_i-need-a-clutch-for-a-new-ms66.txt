@@ -1,0 +1,50 @@
+[10:00:40] USER: I need a clutch for a new MS661 I want the complete part numbers and all individual plus fitting instructions.
+
+
+----------------------------------------
+[10:00:55] GARY: [THOUGHTS]: - Awaiting model, serial, symptom details
+- Need to request intake info
+- Provide short intake questions
+[ANSWER]: ### Hey, mate – let’s get the right clutch parts and fit‑out for your MS661.
+
+Before I pull the part numbers and give you the step‑by‑step fit‑out, I need a few quick details:
+
+1. **Model & suffix** (e.g., C‑BE, C‑C, etc.)  
+2. **Serial number** (if you have it handy)  
+3. **Symptom pattern** – is the clutch slipping, not engaging, or something else?  
+4. **Recent work done** – have you already removed the old clutch or any other components?  
+5. **Fuel age / battery state** – just to be safe on the power side.
+
+Once I have that, I’ll give you the exact part list and the fitting instructions.
+----------------------------------------
+[10:02:20] USER: Just the part list
+----------------------------------------
+[10:02:39] GARY: [THOUGHTS]: - Need to give part list despite missing model.
+- Warn parts may vary by suffix.
+- Provide generic clutch kit parts.
+- Cite manual pages where possible.
+- End with suggestions list.
+[ANSWER]: ### Clutch kit – generic MS 661 (C‑BE/C‑C/C‑D etc.)
+
+| Qty | Part No. | Description | Ref |
+|---|---|---|---|
+| 1 | 11448932400 | Press sleeve (oil seal, ignition side) | Ref: MS 661 p.135 |
+| 1 | 11448934600 | Installing sleeve (oil seal, clutch side) | Ref: MS 661 p.135 |
+| 1 | 59108902313 | Special screw on solenoid valve (clutch side) | Ref: MS 661 p.135 |
+| 1 | 59108932202 | Pulling tool – two halves of crankcase | Ref: MS 661 p.135 |
+| 1 | 59108938700 | Thrust piece (add‑on for drilled plate) | Ref: MS 661 p.135 |
+| 1 | 59100072222 | AS set – pulling two halves of crankcase | Ref: MS 661 p.135 |
+| 1 | 00008558106 | Sealing plate – testing engine for leaks | Ref: MS 661 p.135 |
+| 1 | 00008902201 | Installing tool – rope guide bushing | Ref: MS 661 p.135 |
+| 1 | 00008932600 | Clamping strap – compressing piston rings | Ref: MS 661 p.135 |
+| 1 | 00008935903 | Locking strip – blocking crankshaft | Ref: MS 661 p.135 |
+
+> **Note:**  
+> The above list covers the *special tools* and *sealing components* that are typically required when fitting a new clutch on an MS 661.  
+> The actual clutch plate, springs, bolts, and washers are part of the standard clutch kit and are listed in the STIHL parts catalogue under the suffix of your machine (e.g., C‑BE, C‑C, C‑D).  
+> If you need the exact part numbers for those items, let me know the suffix and I can pull the full kit list.
+
+**Safety reminder:** Before you start, **kill power, engage the brake, and disconnect the battery**.
+
+---
+----------------------------------------

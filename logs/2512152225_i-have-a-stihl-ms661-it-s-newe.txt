@@ -1,0 +1,114 @@
+[22:25:52] USER: I have a Stihl MS661, it’s newer I don’t have serial no, but
+can see it running M-Tronic 3.0, I need a cylinder piston and relevant gaskets to replace
+a lean seized saw, give me part nos and repair instructions.
+----------------------------------------
+[22:26:56] GARY: [THOUGHTS]: **Step 1 – Intake Check**  
+- Model: MS661 (confirmed)  
+- Serial: Unknown (log as “Unknown”)  
+- Symptom: Lean‑seized saw, likely piston/cylinder issue  
+- No fuel age or battery info provided.  
+
+**Step 2 – State Machine**  
+We’re in **A_WAITING_CONTEXT** but have enough to move to **B_FIRST_TAKE**.  
+We’ll give a hunch and up to three basic checks, then proceed to part list and instructions.  
+
+**Step 3 – Knowledge Availability**  
+The supplied manual excerpts do not contain piston or gasket part numbers.  
+We’ll note “I don’t know” for those parts and advise contacting STIHL or using the service manual’s parts list.  
+
+**Step 4 – Plan**  
+1. Provide a brief hunch: piston wear or compression loss.  
+2. List three discriminating checks: compression test, cylinder inspection, fuel system check.  
+3. Offer a generic piston replacement procedure with safety reminder.  
+4. Provide a parts table with placeholders and a note that part numbers are unknown.  
+5. End with suggestions for the user.
+[ANSWER]: ### B_FIRST_TAKE – Initial Hunch & Basic Checks
+
+**Hunch**  
+A lean‑seized MS661 usually points to **piston wear or a loss of compression**.  
+It could also be a **fuel‑rich setting** or a **faulty M‑Tronic** control, but the piston is the most common culprit.
+
+**Three Basic Checks**
+
+| # | Check | What to Look For | Why It Matters |
+|---|-------|------------------|----------------|
+| 1 | **Compression Test** | Read the compression pressure on the cylinder. | Low compression indicates piston rings, cylinder walls, or valve issues. |
+| 2 | **Cylinder Inspection** | Remove the cylinder head, inspect piston, rings, and cylinder walls for wear or scoring. | Visible wear confirms the need for a new piston/gasket set. |
+| 3 | **Fuel System Check** | Verify carburetor jets, fuel filter, and M‑Tronic settings. | A rich mixture can cause a “lean” feel and seizure. |
+
+> **Safety Note:** Before any work, **kill power, engage the brake, and disconnect the battery**.
+
+---
+
+### C_TARGETED_CHECK – Discriminating Test
+
+**Ask:**  
+> “Can you run a compression test on the cylinder? What pressure do you read?”
+
+(If the user confirms low compression, proceed to piston replacement.)
+
+---
+
+### D_INTERMEDIATE_TEST – Bench Checks
+
+If compression is low, you’ll need to:
+
+1. **Remove the cylinder head** (consult the MS 661 service manual for head removal torque specs – *Ref: MS 661, MS 661 C‑M*).  
+2. **Check the piston rings** for wear or damage.  
+3. **Measure the piston diameter** against the cylinder bore to confirm clearance.
+
+---
+
+### E_ADVANCED_TEST – Tear‑Down (if needed)
+
+If the piston rings are worn or the cylinder walls are scored, you’ll need to:
+
+1. **Remove the piston** (use a piston removal tool – torque spec **not in manual**).  
+2. **Inspect the cylinder walls** with a feeler gauge.  
+3. **Replace the piston and gasket set** (see parts list below).
+
+---
+
+### F_PARTS_PLAN – Parts & Tools
+
+| Qty | Part No. | Description | Ref |
+|-----|----------|-------------|-----|
+| 1   | **Unknown** | Cylinder piston (MS 661) | I don’t know |
+| 1   | **Unknown** | Cylinder head gasket | I don’t know |
+| 1   | **Unknown** | Piston ring set | I don’t know |
+| 1   | **Unknown** | Piston seal | I don’t know |
+| 1   | **Unknown** | Cylinder head gasket (if separate) | I don’t know |
+
+**Tools Needed**
+
+| Qty | Tool | Spec | Ref |
+|-----|------|------|-----|
+| 1   | Piston removal tool | – | – |
+| 1   | Torque wrench | – | – |
+| 1   | Feeler gauge | – | – |
+| 1   | Socket set | – | – |
+
+> **Note:** Since the part numbers aren’t in the local manual, you’ll need to check the STIHL parts catalogue or contact a dealer for the exact numbers.
+
+---
+
+### G_WRAPUP – Repair Instructions
+
+1. **Prep** – Kill power, engage brake, disconnect battery.  
+2. **Remove the saw chain, guide bar, and mounting plate** to access the cylinder.  
+3. **Remove the cylinder head** (follow the head removal torque specs from the manual).  
+4. **Take out the piston** using the piston removal tool.  
+5. **Inspect piston rings and cylinder walls**; if worn, proceed to replacement.  
+6. **Install new piston** – apply a thin layer of piston oil, seat rings, and re‑install.  
+7. **Replace all gaskets** (head gasket, piston seal, ring set).  
+8. **Re‑assemble** – reinstall cylinder head, torque all fasteners to spec.  
+9. **Re‑install chain, bar, and mounting plate**.  
+10. **Reconnect battery, start the saw** – perform a compression test to confirm restoration.  
+11. **Check M‑Tronic settings** – ensure the fuel mixture is correct (lean vs. rich).  
+
+> **Safety Check:** After re‑assembly, double‑check all torque values and ensure the saw is secure before running.
+
+---
+
+### Suggestions
+----------------------------------------

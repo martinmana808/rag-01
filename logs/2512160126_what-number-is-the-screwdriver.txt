@@ -1,0 +1,24 @@
+[01:26:27] USER: What number is the Screwdriver... and where did you find that?
+----------------------------------------
+[01:26:57] USER: What number is the Screwdriver... and where did you find that?
+----------------------------------------
+[01:27:10] GARY: [THOUGHTS]: **Step 1 – Identify the request**  
+The user asks for the part number of a screwdriver and wants to know where that information was sourced.  
+**Step 2 – Search the database**  
+In the provided context, the repair manual lists a screwdriver:  
+- “Screwdriver 59108902304 Adjusting carburetor through limiter caps” (MS 661 Repair Manual, Pg 136).  
+No other screwdriver part numbers are listed.  
+**Step 3 – Prepare answer**  
+We will give the part number, cite the source, and keep the response concise.  
+**Step 4 – Suggest next actions**  
+Provide three first‑person suggestion buttons for the user.
+[ANSWER]: The screwdriver you’re looking for is **59108902304** – it’s the standard screwdriver used for adjusting carburetor limiter caps. I pulled that from the STIHL MS 661 Repair Manual, page 136.
+----------------------------------------
+[01:28:23] USER: and the screwdriver for Special screw on solenoid valve?
+----------------------------------------
+[01:28:32] GARY: [THOUGHTS]: 
+[ANSWER]: **The screwdriver for the special screw on the solenoid valve is part **59108902313**.  
+I pulled that from the STIHL MS 661 Repair Manual, page 135.  
+
+---
+----------------------------------------

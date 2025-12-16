@@ -1,0 +1,27 @@
+[00:48:15] USER: I have a Stihl MS661, 177394843 serial no. What tools do I need to replace the piston?
+----------------------------------------
+[00:49:41] GARY: [THOUGHTS]: 
+[ANSWER]: **Tools you’ll need to pull the piston on a Stihl MS 661**
+
+| Qty | Part No. | Description | Reference |
+|-----|----------|-------------|-----------|
+| 1 | **11088934700** | Assembly drift – used to slide the piston pin out of the piston | MS 661 |
+| 1 | **59108902212** | Installing tool – snap‑ring installation tool (also handy for piston pin removal) | MS 661 |
+| 1 | **59108903100** | Special tool – used on the assembly stand (may help with piston removal) | MS 661 |
+| 1 | **59108903101** | Special tool – another assembly‑stand tool that can be useful during piston work | MS 661 |
+
+**General hand‑tools you’ll also want on hand**
+
+- 10 mm, 12 mm, 14 mm socket set (or equivalent)
+- Torque wrench (for re‑torquing the crankshaft bolts – I don’t have the exact specs in my local manuals)
+- Screwdrivers (flat‑head & Phillips)
+- Pliers (needle‑nose & locking)
+- Small pry bar or piston pin removal tool (if you don’t have the special tools above)
+- Clean rags and a small brush for cleaning piston rings
+
+**Safety reminder**
+
+> **Kill power, engage the brake, and disconnect the battery before you start.**
+
+---
+----------------------------------------

@@ -5,8 +5,8 @@
 ---
 
 ## 📍 Current Status
-**Version:** v1.1 (Stable Logic & Persistence)
-**Date:** December 12, 2025
+**Version:** v1.2 (Retrieval Optimization & Citations)
+**Date:** December 16, 2025
 **Stage:** **Functional Prototype / Alpha**
 > *The core engine is solid. Gary can read manuals, remember them, and follow a strict diagnostic script without hallucinating user responses. He is ready for "heuristic testing" (real-world scenarios).*
 
@@ -52,8 +52,18 @@
 
 ```bash
 /Rag01
-├── app.py                # Main Application Logic (The Brain)
-├── gary_config.txt       # System Prompt (The Persona & State Machine)
-├── workshop_log.txt      # Chat Logs (Auto-generated)
-├── requirements.txt      # Dependencies
-└── chroma_db/            # (Auto-generated) Persistent Database Folder
+├── app.py                  # Main Application Logic (The Brain)
+├── gary_config.txt         # System Prompt (The Persona & State Machine)
+├── ingest_data.py          # [NEW] Batch PDF Ingestion Script
+├── inspect_db.py           # [NEW] Database Content Inspector
+├── logs/                   # Chat Logs (Auto-generated)
+├── data/                   # Raw PDF/Manuals Folder
+├── requirements.txt        # Dependencies
+└── chroma_db/              # (Auto-generated) Persistent Database Folder
+```
+
+## 📈 Recent Updates (v1.2)
+- **Inline Citations:** Gary now explicitly cites the "Source File" and "Page Number" for all technical data.
+- **Deep Retrieval:** Increased default chunk reading depth to 10 to catch buried "Special Tool" references.
+- **Robust Ingestion:** Added `ingest_data.py` with optimized chunk sizing (500 chars) for `all-minilm` compatibility.
+- **Crash Protection:** Added "False Tool Call" recovery to prevent Ollama stream crashes.
