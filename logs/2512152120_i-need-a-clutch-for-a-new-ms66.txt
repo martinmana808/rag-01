@@ -1,0 +1,22 @@
+[21:20:32] USER: I need a clutch for a new MS661 I want the complete part numbers and all
+individual plus fitting instructions
+----------------------------------------
+[21:21:20] GARY: [THOUGHTS]: **Step 1 – Intake Needed**  
+The user wants a clutch for a new MS661 and the part numbers plus fitting instructions.  
+We have no model suffix, serial number, symptom details, recent work, or fuel/battery info.  
+According to the state machine, we must ask for the intake in one short message.  
+We’ll also provide a few quick‑action suggestions for the user to click.  
+No other content is required at this point.
+[ANSWER]: ### Intake  
+Please provide the following details so I can give you the exact clutch part numbers and fitting instructions:  
+
+1. **Model & suffix** (e.g., C‑BE)  
+2. **Serial number**  
+3. **Symptom pattern** (Hot/Cold/Load/Idle)  
+4. **Recent work done** (if any)  
+5. **Fuel age or battery state**  
+
+---
+----------------------------------------
+[21:28:02] USER: MS661 tectronic, but I dont have the serial. 
+----------------------------------------

@@ -1,0 +1,51 @@
+[13:04:04] USER: I've got an MS661 and it's not feeling properly.
+----------------------------------------
+[13:04:27] GARY: [THOUGHTS]: 
+[ANSWER]: **Hey there, let’s get the basics sorted first.**  
+Please give me the following details (if you don’t know one, just say “Unknown”):
+
+1. **Model & suffix** (e.g., C‑BE)  
+2. **Serial number**  
+3. **Symptom pattern** – is it a hot‑start, cold‑start, load‑related, idle issue, etc.?  
+4. **Recent work done** – any recent repairs or maintenance?  
+5. **Fuel age or battery state** – how old is the fuel, or is the battery fresh?
+
+Once I have that, we can dive into the first take.
+----------------------------------------
+[13:04:29] USER: I've got an MS661 and it's not feeling properly.
+----------------------------------------
+[13:04:39] GARY: [THOUGHTS]: 
+[ANSWER]: **Hey, let’s get the basics sorted first.**  
+Please give me the following details (if you don’t know one, just say “Unknown”):
+
+1. **Model & suffix** (e.g., C‑BE)  
+2. **Serial number**  
+3. **Symptom pattern** – is it a hot‑start, cold‑start, load‑related, idle issue, etc.?  
+4. **Recent work done** – any recent repairs or maintenance?  
+5. **Fuel age or battery state** – how old is the fuel, or is the battery fresh?
+
+Once I have that, we can dive into the first take.
+----------------------------------------
+[13:04:40] USER: I've got an MS661 and it's not feeling properly.
+----------------------------------------
+[13:04:54] GARY: [THOUGHTS]: **Step 1 – Identify missing intake data**  
+The user has not supplied any of the required intake details: model & suffix, serial number, symptom pattern, recent work, or fuel/battery status. According to the state machine, we must request these in a single short message.  
+**Step 2 – Prepare the intake request**  
+We’ll ask for each item in a concise list, following the exact wording from the intake protocol.  
+**Step 3 – Add suggestions**  
+Provide three quick‑action buttons: one for model & suffix, one for serial number, and one for symptom description.  
+**Step 4 – Ensure compliance**  
+No extra fluff, no mention of system instructions, just the intake request and suggestions.
+[ANSWER]: **Hey there, let’s get the basics sorted first.**  
+Please give me the following details (if you don’t know one, just say “Unknown”):
+
+1. **Model & suffix** (e.g., C‑BE)  
+2. **Serial number**  
+3. **Symptom pattern** – is it a hot‑start, cold‑start, load‑related, idle issue, etc.?  
+4. **Recent work done** – any recent repairs or maintenance?  
+5. **Fuel age or battery state** – how old is the fuel, or is the battery fresh?
+
+Once I have that, we can dive into the first take.
+----------------------------------------
+[13:04:55] USER: I've got an MS661 and it's not feeling properly.
+----------------------------------------
